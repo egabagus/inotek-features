@@ -14,6 +14,7 @@ include plugin_dir_path(__FILE__) . 'includes/inotek_testimonial.php';
 include plugin_dir_path(__FILE__) . 'includes/inotek_forum.php';
 include plugin_dir_path(__FILE__) . 'includes/inotek_achievement.php';
 include plugin_dir_path(__FILE__) . 'includes/inotek_innovation.php';
+include plugin_dir_path(__FILE__) . 'includes/inotek_journey.php';
 
 function inotek_features_install() {}
 
@@ -32,6 +33,7 @@ function inotek_custom_post_type()
     inotek_forum_post_type();
     inotek_innovation_post_type();
     inotek_achievement_post_type();
+    inotek_journey_post_type();
 }
 
 add_action('init', 'inotek_custom_post_type');
@@ -45,6 +47,7 @@ function inotek_feature_meta_boxes()
     inotek_forum_meta_box();
     inotek_innovation_meta_box();
     inotek_achievement_meta_box();
+    inotek_journey_meta_box();
 }
 
 add_action('add_meta_boxes', 'inotek_feature_meta_boxes', 1);
