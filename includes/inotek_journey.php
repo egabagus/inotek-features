@@ -102,3 +102,19 @@ function inotek_journey_save($post_id)
 }
 
 add_action('save_post_inotek_journey', 'inotek_journey_save');
+
+function inotek_journey_custom_columns($columns)
+{
+	$columns['inotek_journey_order'] = __('Display Order', 'your_text_domain');
+
+	return $columns;
+}
+
+function inotek_journey_column($column, $post_id)
+{
+	switch ($column) {
+		case 'inotek_journey_order':
+			echo get_post_meta($post_id, '_inotek_journey_order', true);
+			break;
+	}
+}
