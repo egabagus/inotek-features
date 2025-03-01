@@ -15,6 +15,7 @@ include plugin_dir_path(__FILE__) . 'includes/inotek_forum.php';
 include plugin_dir_path(__FILE__) . 'includes/inotek_achievement.php';
 include plugin_dir_path(__FILE__) . 'includes/inotek_innovation.php';
 include plugin_dir_path(__FILE__) . 'includes/inotek_journey.php';
+include plugin_dir_path(__FILE__) . 'includes/inotek_hero.php';
 
 function inotek_features_install() {}
 
@@ -34,6 +35,7 @@ function inotek_custom_post_type()
     inotek_innovation_post_type();
     inotek_achievement_post_type();
     inotek_journey_post_type();
+    inotek_hero_post_type();
 }
 
 add_action('init', 'inotek_custom_post_type');
